@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+
+<html>
+<title>Raid Champion Chase Calculator</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+
+<div id="header_img"><img src="titlecard.png" /></div>
+
+<div class="container">
+<h1>Raid Shadow Legends: Champion Chase Calculator</h1>
+
+This is a calculator for Raid Shadow Legends Champion Chasing Event according to the point chart shown at the bottom of the page. 
+<br><br>
+
+<b>Assumptions: </b>I assumed level ups are to full levels of their rank, ex: <br><br>
+
+1 star champion has a max level of 10. <br><br>
+
+For the calculation: I assume the maximum level is reached for that champion of that parituclar rank: <br>
+
+ex: <br><br>
+1 star champions, 1 level = 10 levels -> 10 points.<br>
+2 star champions, 1 level = 20 levels -> 20 points. <br>
+3 star champions, 1 level = 30 levels -> 60 points.<br>
+4 star champions, 1 level = 40 levels -> 120 points. <br>
+5 star champions, 1 level = 50 levels -> 300 points.<br>
+6 star champions, 1 level = 60 levels -> 480 points.<br>
+
+<br><br>
+
+How to use this calculator: <br>
+
+Input how many champions you have planned for levelings & rank ups then press calculate. 
+
+<br>
+<br>
+<b>Important Note*</b>: you must fill in all the fields for this calculator to work. 
+
+<br><br>
+
+
+<div class="jumbotron">
+<div class="row">
+
+    <div class="col"><input type="button" onClick="calc()" Value="Calculate" /></div>
+    <div class="col"><h1>Result:</h1>  <span id="result"></span></div>
+   
+
+</div>
+</div>
+
+        <form>
+        <!-- first row starts here -->
+        <h2>1 Star</h2>
+        <div class="row">
+        <div class="col">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Level Upgrade</label>
+                  <input type="text" class="form-control" id="rank1lvl" placeholder="0">
+                </div>
+        </div>
+        <div class="col">
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Rank Upgrade</label>
+                  <input type="text" class="form-control" id="rank1up" placeholder="0">
+                </div>
+        </div>
+        </div>
+        <!-- first row ends here -->
+
+        <!-- second row starts here -->
+        <h2>2 Star</h2>
+        <div class="row">
+                <div class="col">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Level Upgrade</label>
+                          <input type="text" class="form-control" id="rank2lvl" placeholder="0">
+                        </div>
+                </div>
+                <div class="col">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2">Rank Upgrade</label>
+                          <input type="text" class="form-control" id="rank2up" placeholder="0">
+                        </div>
+                </div>
+                </div>
+        <!-- second row ends here -->
+
+        <!-- third row starts here -->
+         <h2>3 Star</h2>
+         <div class="row">
+                 <div class="col">
+                         <div class="form-group">
+                           <label for="formGroupExampleInput">Level Upgrade</label>
+                           <input type="text" class="form-control" id="rank3lvl" placeholder="0">
+                         </div>
+                 </div>
+                 <div class="col">
+                         <div class="form-group">
+                           <label for="formGroupExampleInput2">Rank Upgrade</label>
+                           <input type="text" class="form-control" id="rank3up" placeholder="0">
+                         </div>
+                 </div>
+                 </div>
+         <!-- third row ends here -->
+        
+        <!-- forth row starts here -->
+            <h2>4 Star</h2>
+            <div class="row">
+                    <div class="col">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Level Upgrade</label>
+                              <input type="text" class="form-control" id="rank4lvl" placeholder="0">
+                            </div>
+                    </div>
+                    <div class="col">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2">Rank Upgrade</label>
+                              <input type="text" class="form-control" id="rank4up" placeholder="0">
+                            </div>
+                    </div>
+                    </div>
+        <!-- forth row ends here -->
+         
+        <!-- fifth row starts here -->
+         <h2>5 Star</h2>
+         <div class="row">
+                 <div class="col">
+                         <div class="form-group">
+                           <label for="formGroupExampleInput">Level Upgrade</label>
+                           <input type="text" class="form-control" id="rank5lvl" placeholder="0">
+                         </div>
+                 </div>
+                 <div class="col">
+                         <div class="form-group">
+                           <label for="formGroupExampleInput2">Rank Upgrade</label>
+                           <input type="text" class="form-control" id="rank5up" placeholder="0">
+                         </div>
+                 </div>
+                 </div>
+     <!-- fifth row ends here -->
+    
+       <!-- sixth row starts here -->
+       <h2>6 Star</h2>
+       <div class="row">
+               <div class="col">
+                       <div class="form-group">
+                         <label for="formGroupExampleInput">Level Upgrade</label>
+                         <input type="text" class="form-control" id="rank6lvl" placeholder="0">
+                       </div>
+               </div>
+    
+               </div>
+               </div>
+   <!-- sixth row ends here -->
+
+    
+        </form>
+
+
+</div>
+
+<div id="header_img"><img src="how.png" /></div>
+
+
+</body>
+
+<script type="text/javascript">
+
+function getValue(){
+
+    numlvl1 = document.getElementById("rank1lvl").value; 
+    numrank1 = document.getElementById("rank1up").value; 
+
+    numlvl2 = document.getElementById("rank2lvl").value; 
+    numrank2 = document.getElementById("rank2up").value; 
+
+    numlvl3 = document.getElementById("rank3lvl").value; 
+    numrank3 = document.getElementById("rank3up").value; 
+
+    numlvl4 = document.getElementById("rank4lvl").value; 
+    numrank4 = document.getElementById("rank4up").value; 
+
+    numlvl5 = document.getElementById("rank5lvl").value; 
+    numrank5 = document.getElementById("rank5up").value; 
+
+    numlvl6 = document.getElementById("rank6lvl").value; 
+
+    let onelvl = parseInt(numlvl1);
+    let onerank = parseInt(numrank1);
+  
+
+    let twolvl = parseInt(numlvl2);
+    let tworank = parseInt(numrank2);
+
+    let threelvl = parseInt(numlvl3);
+    let threerank = parseInt(numrank3);
+
+    let fourlvl = parseInt(numlvl4);
+    let fourrank = parseInt(numrank4);
+
+    let fivelvl = parseInt(numlvl5);
+    let fiverank = parseInt(numrank5);
+
+    let sixlvl = parseInt(numlvl6);
+
+    let one = (10 * onelvl) + (5 * onerank);
+    let two = (20 * twolvl) + (15 * tworank);
+    let three = (60 * threelvl) + (50 * threerank);
+    let four = (120 * fourlvl) + (100 * fourrank);
+    let five = (300 * fivelvl) + (300 * fiverank);
+    let six = (480 * sixlvl);
+
+    return one + two + three + four + five + six;
+
+}
+
+
+
+
+function calc()
+{
+   
+    document.getElementById("result").innerHTML = getValue(); 
+}
+
+
+
+</script>
+
+</html>
+
+
