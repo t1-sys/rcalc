@@ -1,8 +1,5 @@
 # RAID SHADOW LEGENDS CHAMPION CHASE CALCULATOR
 
-
-<h1>Raid Shadow Legends: Champion Chase Calculator</h1>
-
 This is a calculator for Raid Shadow Legends Champion Chasing Event according to the point chart shown at the bottom of the page. 
 <br><br>
 
