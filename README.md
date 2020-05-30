@@ -1,6 +1,6 @@
-# RAID SHADOW LEGENDS CHAMPION CHASE CALCULATOR
+# RAID SHADOW LEGENDS CHAMPION TRAINING CALCULATOR
 
-This is a calculator for Raid Shadow Legends Champion Chasing Event according to the point chart shown at the bottom of the page. 
+This is a calculator for Raid Shadow Legends Champion Training Event according to the point chart shown at the bottom of the page. 
 <br><br>
 
 <b>Assumptions: </b>I assumed level ups are to full levels of their rank, ex: <br><br>
